@@ -106,6 +106,52 @@ p {
 }
 
 
+/*выравниваем меню*/
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: auto;
+}
+
+.menu {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item {
+    display: block;
+}
+
+.menu-item:hover,
+.menu-item:focus {
+    color: var(--link-alt-color);
+}
+
+.menu-item>.social-icons-envelope-svg:hover,
+.menu-item>.social-icons-envelope-svg:focus {
+    color: var(--link-alt-color);
+    fill: var(--link-alt-color);
+}
+
+.social-icons-envelope-svg:hover,
+.social-icons-envelope-svg:focus {
+    fill: var(--link-alt-color);
+}
+
+.social-icons-smartphone-svg:hover,
+.social-icons-smartphone-svg:focus {
+    fill: var(--link-alt-color);
+}
+
+.menu-item:not(:last-child) {
+    margin-right: var(--btn-link);
+}
+
+
 /*логотип внизу*/
 
 .logo-cl-alt :hover,
@@ -173,38 +219,6 @@ p {
 .info:focus {
     color: var(--link-alt-color);
 }
-
-.info-header:hover+.social-icons-envelope-svg,
-.info-header:focus+.social-icons-envelope-svg {
-    color: var(--link-alt-color);
-    fill: var(--link-alt-color);
-}
-
-
-/*
-.social-icons-smartphone-svg:hover,
-.social-icons-smartphone-svg:focus {
-    color: var(--link-alt-color);
-    fill: var(--link-alt-color);
-}*/
-
-
-/*
-.info-header:hover,
-.info-header:focus {
-    color: var(--link-alt-color);
-    fill: var(--link-alt-color);
-}
-*/
-
-
-/*
-.social-icons-envelope-svg:hover,
-.social-icons-envelope-svg:focus {
-    color: var(--link-alt-color);
-    fill: var(--link-alt-color);
-}
-*/
 
 .social-icons-envelope-svg {
     width: 16px;
@@ -318,31 +332,6 @@ p {
 .btn-portfolio-cl:focus {
     color: var(--alternative-title-color);
     background-color: #2196F3;
-}
-
-
-/*выравниваем меню*/
-
-.nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-right: auto;
-}
-
-.menu {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu-item {
-    display: block;
-}
-
-.menu-item:not(:last-child) {
-    margin-right: var(--btn-link);
 }
 
 .menu-item-portfolio {
