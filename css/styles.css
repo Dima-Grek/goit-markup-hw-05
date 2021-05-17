@@ -126,24 +126,17 @@ p {
     display: block;
 }
 
-.menu-item:hover,
-.menu-item:focus {
-    color: var(--link-alt-color);
-}
-
-.menu-item>.social-icons-envelope-svg:hover,
-.menu-item>.social-icons-envelope-svg:focus {
+.menu-item:hover a,
+.menu-item:hover svg use {
     color: var(--link-alt-color);
     fill: var(--link-alt-color);
 }
 
-.social-icons-envelope-svg:hover,
-.social-icons-envelope-svg:focus {
-    fill: var(--link-alt-color);
+.info-header:focus {
+    color: var(--link-alt-color);
 }
 
-.social-icons-smartphone-svg:hover,
-.social-icons-smartphone-svg:focus {
+.info-header:focus svg {
     fill: var(--link-alt-color);
 }
 
