@@ -253,11 +253,13 @@ p {
     padding-top: 200px;
     padding-bottom: 200px;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .img-bg {
     background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/icons/bgteam.png);
-    max-width: 1700px;
+    max-width: 1200px;
     background-size: cover;
     background-color: var(--dark-bg-color);
 }
