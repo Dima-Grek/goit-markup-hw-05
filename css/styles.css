@@ -296,7 +296,7 @@ p {
 
 .img-bg {
     background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/icons/bgteam.png);
-    max-width: 1200px;
+    max-width: 1600px;
     background-size: cover;
     background-color: var(--dark-bg-color);
 }
