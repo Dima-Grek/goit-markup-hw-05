@@ -16,6 +16,7 @@
     --btn-link: 50px;
     --box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     --box-card-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .body {
@@ -92,8 +93,8 @@ p {
 }
 
 .logo-cl,
-.logo:hover,
-.logo:focus {
+.logo:hover span,
+.logo:focus span {
     color: var(--link-alt-color);
 }
 
@@ -167,7 +168,7 @@ p {
     position: relative;
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--cubic-bezier);
 }
 
 .active-link:hover::after {
@@ -186,7 +187,7 @@ p {
     opacity: 0;
     transition-property: background-color, opacity, visibility;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--cubic-bezier);
 }
 
 .link:hover::after {
@@ -205,7 +206,7 @@ p {
     opacity: 0;
     transition-property: background-color, opacity, visibility;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--cubic-bezier);
 }
 
 .active-link:hover,
@@ -296,7 +297,7 @@ p {
 
 .img-bg {
     background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/icons/bgteam.png);
-    max-width: 1600px;
+    max-width: 1200px;
     background-size: cover;
     background-color: var(--dark-bg-color);
 }
@@ -326,6 +327,7 @@ p {
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    transition: var(--cubic-bezier);
 }
 
 
@@ -348,7 +350,8 @@ p {
 
 .btn-page-site:hover,
 .btn-page-site:focus {
-    color: var(--link-color)
+    color: var(--link-color);
+    transition: var(--cubic-bezier);
 }
 
 
@@ -362,6 +365,7 @@ p {
     line-height: 1.39;
     color: var(--link-color);
     background-color: #F5F4FA;
+    transition: var(--cubic-bezier);
 }
 
 
@@ -571,12 +575,15 @@ p {
 .card1 {
     background: #FFFFFF;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
 .card2 {
     margin-top: 30px;
     background: #FFFFFF;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .card-text {
@@ -626,11 +633,13 @@ p {
 .social-icons-link:hover>.social-icons-svg,
 .social-icons-link:focus>.social-icons-svg {
     fill: #ffffff;
+    transition: var(--cubic-bezier);
 }
 
 .social-icons-link:hover,
 .social-icons-link:focus {
     background-color: #2196F3;
+    transition: var(--cubic-bezier);
 }
 
 .social-icons-svg {
@@ -666,12 +675,14 @@ p {
 .social-icons-link-company:hover>.social-icons-company-svg,
 .social-icons-link-company:focus>.social-icons-company-svg {
     fill: #2196F3;
+    transition: var(--cubic-bezier);
 }
 
 .social-icons-link-company:hover,
 .social-icons-link-company:focus {
     background-color: #ffffff;
     border-color: #2196F3;
+    transition: var(--cubic-bezier);
 }
 
 .social-icons-company-svg {
@@ -702,6 +713,7 @@ p {
 .social-icons-skills-svg:hover,
 .social-icons-skills-svg:focus {
     fill: #2196F3;
+    transition: var(--cubic-bezier);
 }
 
 
@@ -710,11 +722,13 @@ p {
 .btn-portfolio-cl:hover,
 .btn-portfolio-cl:focus {
     box-shadow: var(--box-card-shadow);
+    transition: var(--cubic-bezier);
 }
 
 .card1:hover,
 .card1:focus {
     box-shadow: var(--box-card-shadow);
+    transition: var(--cubic-bezier);
 }
 
 .thumb-footer {
@@ -732,7 +746,7 @@ p {
 .page-footer-title {
     font-weight: bold;
     font-size: 14px;
-    line-height: 1, 71;
+    line-height: 1.71;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -756,6 +770,7 @@ p {
 .social-footer-icons-link:hover,
 .social-footer-icons-link:focus {
     background-color: #2196F3;
+    transition: var(--cubic-bezier);
 }
 
 .social-footer-icons-svg {
@@ -767,11 +782,13 @@ p {
 .social-icons-link:hover>.social-icons-svg,
 .social-icons-link:focus>.social-icons-svg {
     fill: #ffffff;
+    transition: var(--cubic-bezier);
 }
 
 .social-icons-link:hover,
 .social-icons-link:focus {
     background-color: #2196F3;
+    transition: var(--cubic-bezier);
 }
 
 .social-icons-svg {
@@ -785,4 +802,120 @@ p {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+
+.item {
+    position: relative;
+    list-style: none;
+}
+
+.link-overflow {
+    display: block;
+}
+
+.thumb-overflow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.overley {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    position: absolute;
+    background: rgba(47, 48, 58, 0.8);
+    color: #FFFFFF;
+    padding-top: 27px;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+}
+
+.overley-portfolio {
+    font-size: 18px;
+    line-height: 1.56;
+    text-align: left;
+    letter-spacing: 0.03em;
+    position: absolute;
+    background: rgba(33, 150, 243, 0.9);
+    color: #FFFFFF;
+    width: 370px;
+    height: 294px;
+    padding: 63px 24px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 250ms var(--cubic-bezier), opacity 250ms var(--cubic-bezier);
+}
+
+.link-overley:hover .overley-portfolio {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 500ms ease-out 200ms;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 100%;
+    max-width: 528px;
+    min-height: 581px;
+    padding: 40px 30px;
+    background-color: #fff;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 700ms ease-in-out 300ms;
+}
+
+.btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: var(--cubic-bezier);
+}
+
+.btn-close-icon:hover button,
+.btn-close-icon:hover svg use {
+    fill: var(--accent-color);
+}
+
+.btn-close:hover button,
+.btn-close:hover svg use {
+    color: var(--link-alt-color);
+    fill: var(--link-alt-color);
+}
+
+.btn-close-icon {
+    width: 11px;
+    height: 11px;
+}
+
+.is-hidden .modal {
+    transform: translate(0, -100%) scale(0.2);
 }

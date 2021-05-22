@@ -24,6 +24,7 @@
                     <li class="menu-item logo-header"><a class="active-link  header-link" href="./index.html">Студия</a></li>
                     <li class="menu-item"><a class="link header-link" href="./portfolio.html">Портфолио</a></li>
                     <li class="menu-item"><a class="link header-link" href="Контакты">Контакты</a></li>
+                </ul>
             </nav>
 
             <div class="header-flex">
@@ -54,8 +55,7 @@
 
             <div class="container">
                 <h1 class="hero">Эффективные решения для вашего бизнеса</h1>
-
-                <button class="btn btn-page-site" type="button">Заказать услугу</button>
+                <button class="btn btn-page-site" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <!--section2-->
@@ -137,17 +137,24 @@
                 <ul class="list card-set ">
                     <li class="item">
                         <div class="card2">
-                            <img class="img" src="images/section3/img1.jpg " width="370" alt="планшет " />
+                            <a class="link-overley">
+                                <img class="img" src="images/section3/img1.jpg " width="370" alt="планшет " />
+                                <p class="overley">Декстопные Приложения</p>
+                            </a>
                         </div>
+
                     </li>
                     <li class="item">
                         <div class="card2">
                             <img class="img" src="images/section3/img2.jpg " width="370" alt="ноутбук " />
+                            <p class="overley">Мобильные Приложения</p>
                         </div>
                     </li>
                     <li class="item">
                         <div class="card2">
                             <img class="img" src="images/section3/img3.jpg " width="370" alt="компьютер " />
+                            <p class="overley">Дизайнерские Решения</p>
+
                         </div>
                     </li>
                 </ul>
@@ -382,6 +389,15 @@
                 </div>
             </div>
         </section>
+        <div class="backdrop is-hidden" data-backdrop>
+            <div class="modal">
+                <svg class="modal-svg" width="11" height="11">
+                    <use href="./images/icons/sprite.svg#icon-close"> </use>
+                  </svg>
+                </button>
+
+            </div>
+        </div>
 
     </main>
     <!--footer-->
@@ -440,8 +456,63 @@
         </div>
 
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal ">
+            <button class="btn-close" data-modal-close>
+                <svg class="btn-close-icon">
+                    <use href="./images/icons/sprite.svg#icon-close" width="11" height="11"></use>
+                </svg>
+            </button>
+            <!--
+            <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+            
+            <form class="form">
 
+                <div class="form__name">
+                    <label for="name" class="form__label">Имя</label>
+                    <input type="text" class="form__input" name="name" id="name">
+                    <svg class="modal-icon-name">
+                        <use href="./images/icons.svg#icon-Vector"></use>
+                    </svg>
+                </div>
 
+                <div class="form__tel">
+                    <label for="tel" class="form__label">Телефон</label>
+                    <input type="tel" class="form__input" name="tel" id="tel">
+                    <svg class="modal-icon-tel">
+                        <use href="./images/icons.svg#icon-Vector-1"></use>
+                    </svg>
+                </div>
+
+                <div class="form__mail">
+                    <label for="mail" class="form__label">Почта</label>
+                    <input type="email" class="form__input" name="mail" id="mail">
+                    <svg class="modal-icon-mail">
+                        <use href="./images/icons.svg#icon-Vector-2"></use>
+                    </svg>
+                </div>
+
+                <div class="form-area">
+                    <label for="comments" class="form__label">Комментарии</label><br>
+                    <textarea class="comments" name="comments" rows="5" id="comments" placeholder="Введите текст"></textarea>
+                </div>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-modal visually-hidden" name="police" value="i-agree">
+                    <span class="icon-checkbox"></span>             
+                    Соглашаюсь с рассылкой и принимаю              
+                    <a href="" class="checkbox-link"> Условия договора</a>
+                </label>
+
+                <div class="modal-btn">
+                    <button type="submit" class="modal-button">Отправить</button>
+                </div>
+            </form>
+        -->
+        </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
